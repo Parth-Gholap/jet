@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand-bg: #050505;
-  --color-brand-bg-alt: #0a0a0a;
-  --color-brand-text: #f0ece4;
-  --color-brand-accent: #295dff;
-  
-  --font-serif: var(--font-bodoni);
-  --font-sans: var(--font-manrope);
-}
-
 :root {
   --background: #050505;
   --foreground: #f0ece4;
@@ -18,19 +8,23 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-manrope), sans-serif;
   overflow-x: hidden;
 }
 
+.font-serif, h1, h2, h3 {
+  font-family: var(--font-bodoni), serif;
+}
+
 /* Glassmorphism utilities */
-@utility glass {
+.glass {
   background: rgba(10, 10, 10, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-@utility glass-accent {
+.glass-accent {
   background: rgba(41, 93, 255, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

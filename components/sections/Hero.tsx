@@ -20,12 +20,12 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-brand-bg flex items-center"
+      className="relative w-full h-screen overflow-hidden bg-[#050505] flex items-center"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-1/4 -right-1/4 w-[80vw] h-[80vw] bg-brand-accent/10 rounded-full blur-[150px] mix-blend-screen" />
-        <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-brand-bg to-transparent z-10" />
+        <div className="absolute top-1/4 -right-1/4 w-[80vw] h-[80vw] bg-[#295dff]/10 rounded-full blur-[150px] mix-blend-screen" />
+        <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-[#050505] to-transparent z-10" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row h-full">
@@ -43,8 +43,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 3.8, ease: [0.16, 1, 0.3, 1] }} // After preloader
           >
-            <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-4 font-mono">
-              <span className="w-8 h-[1px] bg-brand-accent block"></span>
+            <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-4 font-mono">
+              <span className="w-8 h-[1px] bg-[#295dff] block"></span>
               Project Aerion
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight mb-8 drop-shadow-2xl max-w-4xl">
@@ -59,10 +59,10 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-6 items-center mb-16">
-              <button className="group relative overflow-hidden rounded-full glass-accent px-8 py-4 flex items-center gap-3 transition-all duration-500 hover:bg-brand-accent/20 hover:shadow-[0_0_30px_rgba(41,93,255,0.3)] border border-brand-accent/30">
+              <button className="group relative overflow-hidden rounded-full glass-accent px-8 py-4 flex items-center gap-3 transition-all duration-500 hover:bg-[#295dff]/20 hover:shadow-[0_0_30px_rgba(41,93,255,0.3)] border border-[#295dff]/30">
                 <span className="relative z-10 text-xs tracking-widest uppercase font-bold text-white">Explore Aircraft</span>
                 <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform text-white" />
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/0 via-brand-accent/20 to-brand-accent/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#295dff]/0 via-[#295dff]/20 to-[#295dff]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               </button>
               
               <button className="group flex items-center gap-4 px-6 py-4 text-xs tracking-widest uppercase font-medium hover:text-white transition-colors text-white/70">
@@ -77,7 +77,7 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-8 max-w-xl">
               <div>
                 <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-1">Max Range</p>
-                <p className="font-serif text-2xl text-white">8,500 <span className="text-sm font-sans text-brand-accent">NM</span></p>
+                <p className="font-serif text-2xl text-white">8,500 <span className="text-sm font-sans text-[#295dff]">NM</span></p>
               </div>
               <div>
                 <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-1">Top Speed</p>
@@ -85,7 +85,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-1">Capacity</p>
-                <p className="font-serif text-2xl text-white">18 <span className="text-sm font-sans text-brand-accent">PAX</span></p>
+                <p className="font-serif text-2xl text-white">18 <span className="text-sm font-sans text-[#295dff]">PAX</span></p>
               </div>
             </div>
           </motion.div>
@@ -111,7 +111,7 @@ export default function Hero() {
               priority
             />
             {/* Turbine glowing effect */}
-            <div className="absolute top-[45%] right-[25%] w-32 h-32 bg-brand-accent/40 rounded-full blur-[60px] animate-pulse" />
+            <div className="absolute top-[45%] right-[25%] w-32 h-32 bg-[#295dff]/40 rounded-full blur-[60px] animate-pulse" />
           </motion.div>
         </motion.div>
       </div>

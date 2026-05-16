@@ -53,7 +53,7 @@ const itemVariants: Variants = {
 
 export default function TechnologyGrid() {
   return (
-    <section className="py-32 relative bg-brand-bg overflow-hidden" id="technology">
+    <section className="py-32 relative bg-[#050505] overflow-hidden" id="technology">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -62,7 +62,7 @@ export default function TechnologyGrid() {
           transition={{ duration: 1 }}
           className="mb-20 text-center md:text-left"
         >
-          <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 font-mono">
+          <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono">
             Innovation
           </p>
           <h2 className="font-serif text-4xl md:text-6xl tracking-tight">
@@ -81,13 +81,13 @@ export default function TechnologyGrid() {
             <motion.div 
               key={idx} 
               variants={itemVariants}
-              className="group relative p-8 rounded-2xl glass transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(41,93,255,0.1)] hover:border-brand-accent/30"
+              className="group relative p-8 rounded-2xl glass transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(41,93,255,0.1)] hover:border-[#295dff]/30"
             >
               {/* Subtle hover gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/0 to-brand-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#295dff]/0 to-[#295dff]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
               
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-brand-accent group-hover:bg-brand-accent/10 group-hover:border-brand-accent/50 transition-colors duration-500">
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-[#295dff] group-hover:bg-[#295dff]/10 group-hover:border-[#295dff]/50 transition-colors duration-500">
                   {tech.icon}
                 </div>
                 <h3 className="text-xl font-medium mb-3 tracking-wide">{tech.title}</h3>
@@ -101,7 +101,7 @@ export default function TechnologyGrid() {
       </div>
       
       {/* Background glow */}
-      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-[#295dff]/5 rounded-full blur-[120px] pointer-events-none translate-y-1/2 translate-x-1/4" />
     </section>
   );
 }

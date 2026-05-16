@@ -105,7 +105,7 @@ export default function AircraftDeconstruction() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full bg-brand-bg overflow-hidden" id="engineering">
+    <section ref={containerRef} className="relative h-screen w-full bg-[#050505] overflow-hidden" id="engineering">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full object-cover z-0" />
       
       {/* Dark overlay to ensure text visibility over the canvas */}
@@ -118,7 +118,7 @@ export default function AircraftDeconstruction() {
           ref={(el) => { textRefs.current[0] = el; }} 
           className="absolute opacity-0 translate-y-10 text-center flex flex-col items-center w-full max-w-4xl"
         >
-          <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Acoustic Isolation
           </p>
           <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)] mb-6">
@@ -133,7 +133,7 @@ export default function AircraftDeconstruction() {
           ref={(el) => { textRefs.current[1] = el; }} 
           className="absolute opacity-0 translate-y-10 text-center flex flex-col items-center w-full max-w-4xl"
         >
-          <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Aerospace Architecture
           </p>
           <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)] mb-6">
@@ -148,12 +148,12 @@ export default function AircraftDeconstruction() {
           ref={(el) => { textRefs.current[2] = el; }} 
           className="absolute opacity-0 translate-y-10 text-center flex flex-col items-center w-full max-w-5xl"
         >
-          <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Material Science
           </p>
           <h2 className="font-serif text-4xl md:text-6xl lg:text-8xl tracking-tight text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)] leading-tight mb-6">
             Titanium. Carbon Fiber.<br />
-            <span className="text-brand-accent italic font-light drop-shadow-[0_0_20px_rgba(41,93,255,0.4)]">Aerospace Intelligence.</span>
+            <span className="text-[#295dff] italic font-light drop-shadow-[0_0_20px_rgba(41,93,255,0.4)]">Aerospace Intelligence.</span>
           </h2>
           <p className="text-white/80 text-lg md:text-xl font-light drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] max-w-3xl text-center">
             A fuselage that breathes and adapts. Integrated neural-net sensors monitor atmospheric pressure constantly, shifting aerodynamic profiles in real time.
@@ -164,17 +164,17 @@ export default function AircraftDeconstruction() {
           ref={(el) => { textRefs.current[3] = el; }} 
           className="absolute opacity-0 translate-y-10 text-center flex flex-col items-center w-full max-w-4xl"
         >
-          <p className="text-brand-accent text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             The Next Era
           </p>
           <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)] mb-8">
             Reserve the Future
           </h2>
           <div className="flex flex-wrap justify-center gap-6 pointer-events-auto">
-            <button className="rounded-full bg-brand-accent text-white px-10 py-5 text-xs tracking-widest uppercase font-bold hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300">
+            <button className="rounded-full bg-[#295dff] text-white px-10 py-5 text-xs tracking-widest uppercase font-bold hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300">
               Build Your X1
             </button>
-            <button className="rounded-full glass-accent px-10 py-5 text-xs tracking-widest uppercase font-medium hover:bg-brand-accent/20 transition-all border border-brand-accent/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+            <button className="rounded-full glass-accent px-10 py-5 text-xs tracking-widest uppercase font-medium hover:bg-[#295dff]/20 transition-all border border-[#295dff]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
               View Specifications
             </button>
           </div>

@@ -31,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${bodoni.variable} ${manrope.variable} antialiased`}
     >
-      <body className="min-h-screen bg-brand-bg text-brand-text selection:bg-brand-accent selection:text-white">
+      <body className="min-h-screen bg-[#050505] text-[#f0ece4] selection:bg-[#295dff] selection:text-white">
         <SmoothScroll>
           <Navbar />
           {children}

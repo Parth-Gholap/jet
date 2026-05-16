@@ -34,10 +34,10 @@ export default function Navbar() {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="hover:text-brand-accent transition-colors duration-300 relative group"
+              className="hover:text-[#295dff] transition-colors duration-300 relative group"
             >
               {item}
-              <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-brand-accent transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[#295dff] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </div>

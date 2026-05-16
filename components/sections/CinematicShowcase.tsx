@@ -32,17 +32,17 @@ export default function CinematicShowcase() {
 
       {/* Overlays */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-bg via-transparent to-brand-bg z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505] z-10" />
       
       {/* Atmospheric Fog/Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-brand-accent/20 blur-[100px] z-10 mix-blend-screen" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-[#295dff]/20 blur-[100px] z-10 mix-blend-screen" />
 
       {/* Content */}
       <motion.div 
         style={{ y: yText }}
         className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center"
       >
-        <p className="text-brand-accent text-xs tracking-[0.4em] uppercase mb-6 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+        <p className="text-[#295dff] text-xs tracking-[0.4em] uppercase mb-6 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           Unrestricted Freedom
         </p>
         <h2 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tighter text-white drop-shadow-[0_10px_40px_rgba(0,0,0,0.9)] mb-8">

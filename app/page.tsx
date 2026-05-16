@@ -8,7 +8,7 @@ import FinalCTA from "../components/sections/FinalCTA";
 
 export default function Home() {
   return (
-    <main className="relative bg-brand-bg w-full">
+    <main className="relative bg-[#050505] w-full">
       <Preloader />
       <Hero />
       <AircraftDeconstruction />
