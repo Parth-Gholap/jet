@@ -65,38 +65,40 @@ export default function AircraftDeconstruction() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top top",
-        end: "+=4000", // 500vh equivalent
-        scrub: 0.5,
-        pin: true,
-      }
+        start: "top 60%", // Start playing when visible
+      },
+      repeat: -1, // Infinite continuous loop
     });
 
-    // Frame sequence animation
-    tl.to(airpods, {
-      frame: frameCount - 1,
-      snap: "frame",
-      ease: "none",
-      onUpdate: render
-    });
-
-    // Text sequence animations mapping to scroll progress
     const texts = textRefs.current;
     
-    // 0-20% "Quiet Power"
-    tl.to(texts[0], { opacity: 1, y: 0, duration: 0.1 }, 0);
-    tl.to(texts[0], { opacity: 0, y: -20, duration: 0.1 }, 0.2);
+    // 1. Continuous smooth 3D motion (6 seconds total)
+    tl.to(airpods, { 
+      frame: frameCount - 1, 
+      snap: "frame", 
+      ease: "none", 
+      duration: 6, 
+      onUpdate: render 
+    }, 0);
 
-    // 25-45% "Precision in Every Millimeter"
-    tl.to(texts[1], { opacity: 1, y: 0, duration: 0.1 }, 0.25);
-    tl.to(texts[1], { opacity: 0, y: -20, duration: 0.1 }, 0.45);
+    // 2. Texts fade in and out while the animation plays seamlessly in the background
+    const fadeDur = 0.4;
 
-    // 50-75% "Titanium. Carbon Fiber. Aerospace Intelligence."
-    tl.to(texts[2], { opacity: 1, y: 0, duration: 0.1 }, 0.5);
-    tl.to(texts[2], { opacity: 0, y: -20, duration: 0.1 }, 0.75);
+    // Text 0
+    tl.to(texts[0], { opacity: 1, y: 0, duration: fadeDur }, 0.2);
+    tl.to(texts[0], { opacity: 0, y: -20, duration: fadeDur }, 1.2);
 
-    // 80-100% "Reserve the Future"
-    tl.to(texts[3], { opacity: 1, y: 0, duration: 0.1 }, 0.8);
+    // Text 1
+    tl.to(texts[1], { opacity: 1, y: 0, duration: fadeDur }, 1.7);
+    tl.to(texts[1], { opacity: 0, y: -20, duration: fadeDur }, 2.7);
+
+    // Text 2
+    tl.to(texts[2], { opacity: 1, y: 0, duration: fadeDur }, 3.2);
+    tl.to(texts[2], { opacity: 0, y: -20, duration: fadeDur }, 4.2);
+
+    // Text 3
+    tl.to(texts[3], { opacity: 1, y: 0, duration: fadeDur }, 4.7);
+    tl.to(texts[3], { opacity: 0, y: -20, duration: fadeDur }, 5.7);
 
     return () => {
       window.removeEventListener("resize", updateCanvasSize);
