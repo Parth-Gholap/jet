@@ -3,6 +3,37 @@
 :root {
   --background: #050505;
   --foreground: #f0ece4;
+  --accent: #295dff;
+  
+  /* Cinematic Background Variables */
+  --bg-gradient-center: rgba(20, 20, 25, 1);
+  --bg-gradient-edge: rgba(5, 5, 5, 1);
+  --glow-primary: #295dff;
+  --glow-secondary: #6084ff;
+  --glow-blend: screen;
+  --fog-color: rgba(255, 255, 255, 0.05);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(10, 10, 10, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  --background: #fdfdfd;
+  --foreground: #0a0a0a;
+  --accent: #1e40af;
+  
+  /* Cinematic Background Variables */
+  --bg-gradient-center: rgba(245, 247, 250, 1);
+  --bg-gradient-edge: rgba(220, 225, 230, 1);
+  --glow-primary: #a5b4fc;
+  --glow-secondary: #bfdbfe;
+  --glow-blend: multiply;
+  --fog-color: rgba(0, 0, 0, 0.05);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -18,14 +49,14 @@ body {
 
 /* Glassmorphism utilities */
 .glass {
-  background: rgba(10, 10, 10, 0.4);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
 }
 
 .glass-accent {
-  background: rgba(41, 93, 255, 0.05);
+  background: rgba(41, 93, 255, 0.05); /* Will adjust via inline style or tailwind later */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(41, 93, 255, 0.2);

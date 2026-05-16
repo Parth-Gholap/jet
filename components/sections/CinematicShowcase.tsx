@@ -15,7 +15,7 @@ export default function CinematicShowcase() {
   const yText = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section ref={containerRef} className="relative w-full h-[120vh] overflow-hidden bg-black flex items-center justify-center">
+    <section ref={containerRef} className="relative w-full h-[120vh] overflow-hidden bg-transparent flex items-center justify-center">
       
       {/* Parallax Background using frame 120 (mid-animation) as a proxy for 'flying through clouds' */}
       <motion.div 
@@ -31,28 +31,28 @@ export default function CinematicShowcase() {
       </motion.div>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505] z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_100%)] z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--background)]/80 via-transparent to-[var(--background)]/80 z-10" />
       
       {/* Atmospheric Fog/Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-[#295dff]/20 blur-[100px] z-10 mix-blend-screen" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-[var(--accent)]/20 blur-[100px] z-10 mix-blend-screen" />
 
       {/* Content */}
       <motion.div 
         style={{ y: yText }}
         className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center"
       >
-        <p className="text-[#295dff] text-xs tracking-[0.4em] uppercase mb-6 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+        <p className="text-[var(--accent)] text-xs tracking-[0.4em] uppercase mb-6 font-mono font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           Unrestricted Freedom
         </p>
-        <h2 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tighter text-white drop-shadow-[0_10px_40px_rgba(0,0,0,0.9)] mb-8">
+        <h2 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tighter text-[var(--foreground)] drop-shadow-[0_10px_40px_rgba(0,0,0,0.9)] mb-8">
           BEYOND DISTANCE
         </h2>
-        <div className="glass-accent p-8 md:p-12 rounded-3xl backdrop-blur-xl bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-          <p className="text-xl md:text-3xl text-white font-light tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] mb-6">
+        <div className="glass-accent p-8 md:p-12 rounded-3xl backdrop-blur-xl bg-[var(--background)]/40 border border-[var(--foreground)]/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          <p className="text-xl md:text-3xl text-[var(--foreground)] font-light tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] mb-6">
             Built for those who redefine the horizon.
           </p>
-          <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[var(--foreground)]/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
             From New York to Singapore, non-stop. The AERION X1's revolutionary quantum-thrust engines provide an unprecedented 8,500 nautical mile range. Connect the world's financial capitals without layovers, refueling, or compromise. The atmosphere is no longer an obstacle; it's your private corridor.
           </p>
         </div>

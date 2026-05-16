@@ -3,6 +3,8 @@ import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "../components/SmoothScroll";
 import Navbar from "../components/Navbar";
+import CinematicBackground from "../components/CinematicBackground";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 const bodoni = Bodoni_Moda({
   variable: "--font-bodoni",
@@ -31,11 +33,14 @@ export default function RootLayout({
       lang="en"
       className={`${bodoni.variable} ${manrope.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#050505] text-[#f0ece4] selection:bg-[#295dff] selection:text-white">
-        <SmoothScroll>
-          <Navbar />
-          {children}
-        </SmoothScroll>
+      <body className="min-h-screen bg-transparent text-[var(--foreground)] selection:bg-[var(--accent)] selection:text-white transition-colors duration-1000">
+        <ThemeProvider>
+          <CinematicBackground />
+          <SmoothScroll>
+            <Navbar />
+            {children}
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

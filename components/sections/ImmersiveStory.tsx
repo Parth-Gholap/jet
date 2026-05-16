@@ -32,18 +32,18 @@ const stories = [
 
 export default function ImmersiveStory() {
   return (
-    <section className="py-32 bg-[#050505] relative z-10" id="experience">
+    <section className="py-32 bg-transparent relative z-10" id="experience">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         
         {stories.map((story, idx) => (
-          <div key={idx} className="relative py-24 md:py-32 border-t border-white/5 last:border-b">
+          <div key={idx} className="relative py-24 md:py-32 border-t border-[var(--foreground)]/5 last:border-b">
             {/* Animated vertical line */}
             <motion.div 
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-0 left-0 w-[1px] bg-gradient-to-b from-[#295dff]/50 to-transparent md:left-1/2"
+              className="absolute top-0 left-0 w-[1px] bg-gradient-to-b from-[var(--accent)]/50 to-transparent md:left-1/2"
             />
             
             <div className={`flex flex-col md:flex-row gap-12 md:gap-24 items-center ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -55,7 +55,7 @@ export default function ImmersiveStory() {
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 className="flex-1 w-full"
               >
-                <p className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-4 font-mono">
+                <p className="text-[var(--accent)] text-xs tracking-[0.3em] uppercase mb-4 font-mono">
                   {story.subtitle}
                 </p>
                 <h3 className="font-serif text-4xl md:text-5xl tracking-tight leading-tight">
@@ -70,7 +70,7 @@ export default function ImmersiveStory() {
                 transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="flex-1 w-full"
               >
-                <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                <p className="text-[var(--foreground)]/60 text-lg md:text-xl font-light leading-relaxed">
                   {story.content}
                 </p>
               </motion.div>

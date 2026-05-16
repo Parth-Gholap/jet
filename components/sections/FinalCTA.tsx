@@ -9,8 +9,8 @@ export default function FinalCTA() {
       
       {/* Background glow & gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] h-[50vh] bg-gradient-to-t from-[#295dff]/20 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-[#295dff]/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] h-[50vh] bg-gradient-to-t from-[var(--accent)]/20 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-[var(--accent)]/5 rounded-full blur-[150px]" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
@@ -20,7 +20,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[#295dff] text-xs tracking-[0.3em] uppercase mb-8 font-mono"
+          className="text-[var(--accent)] text-xs tracking-[0.3em] uppercase mb-8 font-mono"
         >
           Secure Your Allocation
         </motion.p>
