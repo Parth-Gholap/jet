@@ -33,11 +33,26 @@ export default function AircraftDeconstruction() {
     const images: HTMLImageElement[] = [];
     const airpods = { frame: 0 };
 
-    // Preload first image immediately, rest asynchronously
+    // Create image objects
     for (let i = 0; i < frameCount; i++) {
-      const img = new Image();
-      img.src = currentFrame(i);
-      images.push(img);
+      images.push(new Image());
+    }
+
+    // Load first image immediately to render initial state
+    images[0].src = currentFrame(0);
+
+    // Defer loading the rest of the sequence until page load is complete 
+    // to prevent network choking and slow initial page load.
+    const loadRemainingFrames = () => {
+      for (let i = 1; i < frameCount; i++) {
+        images[i].src = currentFrame(i);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      setTimeout(loadRemainingFrames, 100);
+    } else {
+      window.addEventListener("load", loadRemainingFrames);
     }
 
     const render = () => {

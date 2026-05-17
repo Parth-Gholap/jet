@@ -10,14 +10,14 @@ export default function Preloader() {
   useEffect(() => {
     let currentProgress = 0;
     const interval = setInterval(() => {
-      currentProgress += Math.floor(Math.random() * 5) + 1;
+      currentProgress += Math.floor(Math.random() * 10) + 5;
       if (currentProgress >= 100) {
         currentProgress = 100;
         setLoading(false);
         clearInterval(interval);
       }
       setProgress(currentProgress);
-    }, 50);
+    }, 20);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,8 +28,8 @@ export default function Preloader() {
         <motion.div
           key="preloader"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] } }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] text-[#f0ece4]"
+          exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } }}
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[var(--background)] text-[var(--foreground)]"
         >
           {/* Subtle background glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-[#295dff]/5 rounded-full blur-[100px]" />
